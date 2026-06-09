@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Rupiah 2026: Pelemahan & Dampaknya ke Harga Pangan | Analisis Interaktif</title>
+    <!-- Google Fonts + Font Awesome + Chart.js -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="container nav-container">
+        <div class="logo"><a href="#">ekonomi<span style="color:#b45309;">&pangan</span></a></div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-nav="home">Home</a></li>
+            <li><a href="#" data-nav="about">About</a></li>
+            <li><a href="#" data-nav="skills">Skills</a></li>
+            <li><a href="#" data-nav="projects">Projects</a></li>
+            <li><a href="#" data-nav="contact">Contact</a></li>
+            <li><button class="theme-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container" id="mainContent">
+    <div class="hero-article">
+        <div class="badge-date"><i class="fas fa-chart-line"></i> Analisis Fundamental • 2026</div>
+        <h1>📉 Harga Rupiah terhadap Dolar dan Dampaknya pada Harga Pangan di Indonesia (2026)</h1>
+        <div class="article-meta">
+            <span><i class="far fa-calendar-alt"></i> 10 Juni 2026</span>
+            <span><i class="fas fa-tag"></i> Ekonomi Makro, Pangan, Nilai Tukar</span>
+            <span><i class="far fa-clock"></i> Estimasi baca 6 menit</span>
+        </div>
+    </div>
+
+    <div class="article-grid">
+        <!-- KOLOM ARTIKEL -->
+        <div class="content-article">
+            <p><strong>💱 Kondisi Nilai Tukar Rupiah terhadap Dolar AS</strong> — Pada tahun 2026, nilai tukar rupiah mengalami tekanan cukup besar terhadap dolar Amerika Serikat. Rupiah sempat melemah hingga menyentuh kisaran <strong>Rp17.500 hingga di atas Rp18.000 per USD</strong>, tercatat sebagai salah satu titik terlemah dalam beberapa periode. Bank Indonesia (BI) merespon dengan intervensi valas dan penyesuaian suku bunga acuan.</p>
+            <p>Faktor penyebab: ketidakpastian global, capital outflow, kenaikan harga energi, dan sentimen fiskal domestik. Dampaknya, harga barang impor lebih mahal dan memicu inflasi.</p>
+            
+            <h2>📊 Dampak Terhadap Harga Pangan</h2>
+            <div class="price-table">
+                <table>
+                    <thead><tr><th>Komoditas</th><th>Kisaran Harga (per kg)</th><th>Status</th></tr></thead>
+                    <tbody>
+                        <tr><td>🍚 Beras medium</td><td>Rp14.000 – Rp17.000</td><td><span class="trend-badge">+8,5% (YoY)</span></td></tr>
+                        <tr><td>🍬 Gula pasir</td><td>Rp18.000 – Rp20.000</td><td><span class="trend-badge">Tekanan impor</span></td></tr>
+                        <tr><td>🫒 Minyak goreng curah</td><td>~Rp19.000</td><td><span class="trend-badge">Naik 12%</span></td></tr>
+                        <tr><td>🌶️ Cabai rawit merah</td><td>Rp60.000 – Rp70.000</td><td><span class="trend-badge">Fluktuasi ekstrim</span></td></tr>
+                        <tr><td>🥩 Daging sapi</td><td>> Rp130.000</td><td><span class="trend-badge">Impor + logistik</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GRAFIK INTERAKTIF CHART JS -->
+            <div class="chart-container">
+                <h3>📈 Tren Harga Pangan Akibat Pelemahan Rupiah (2025-2026)</h3>
+                <canvas id="foodPriceChart" width="400" height="200" style="max-width:100%; height:auto;"></canvas>
+                <p style="font-size:0.8rem; margin-top:8px;">*Indeks harga relatif (Jan 2025 = 100)</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-link" style="font-size:1.5rem; margin-right:12px;"></i>
+                <strong>📈 Hubungan Sederhana:</strong> Rupiah melemah → dolar naik → barang impor mahal → biaya produksi naik → harga pangan ikut naik. Paling terasa pada minyak goreng, gandum, kedelai, daging impor & pakan ternak.
+            </div>
+
+            <!-- KONVERTER INTERAKTIF RUPIAH KE DOLAR -->
+            <div class="currency-converter">
+                <h3><i class="fas fa-exchange-alt"></i> Simulasi Dampak Kurs (Rupiah ⇄ Dolar)</h3>
+                <p>Kurs saat ini: <strong id="kursDisplay">Rp17.800</strong> / USD</p>
+                <input type="number" id="rupiahInput" placeholder="Masukkan nominal Rupiah" value="100000">
+                <button id="convertBtn">Konversi ke Dolar</button>
+                <p id="konversiHasil" style="margin-top:12px; font-weight:bold;">💵 Hasil: $5.62 USD</p>
+                <small>Pelemahan rupiah membuat daya beli terhadap impor menurun drastis.</small>
+            </div>
+
+            <h2>⚠️ Dampak ke Masyarakat</h2>
+            <div class="impact-cards">
+                <div class="impact-item"><i class="fas fa-charging-station"></i><h4>Biaya logistik</h4><p>BBM & distribusi naik karena kurs.</p></div>
+                <div class="impact-item"><i class="fas fa-hand-holding-usd"></i><h4>Daya beli turun</h4><p>Pengeluaran rumah tangga meningkat.</p></div>
+                <div class="impact-item"><i class="fas fa-chart-line"></i><h4>Inflasi pangan</h4><p>Tekanan pada masyarakat bawah.</p></div>
+            </div>
+
+            <h2>🧭 Kesimpulan</h2>
+            <p>Pelemahan rupiah terhadap dolar AS sangat mempengaruhi stabilitas harga pangan. Pemerintah dan BI terus berupaya menjaga stabilitas melalui kebijakan moneter dan subsidi pangan. Penguatan produksi lokal jadi kunci jangka panjang.</p>
+        </div>
+
+        <!-- SIDEBAR (About, Skills, Projects, Contact) -->
+        <aside>
+            <div class="sidebar-card" id="aboutCard">
+                <div class="avatar"><i class="fas fa-user-graduate fa-3x"></i></div>
+                <h3><i class="fas fa-user-circle"></i> About Me</h3>
+                <p>Analis ekonomi pangan dengan fokus pada kebijakan moneter & ketahanan pangan Indonesia. Berpengalaman memantau pergerakan nilai tukar dan komoditas strategis. Alumni UI & Certified Economic Forecaster.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+            </div>
+
+            <div class="sidebar-card" id="skillsCard">
+                <h3><i class="fas fa-code"></i> Skills</h3>
+                <div class="skill-tags">
+                    <span>Analisis Makroekonomi</span><span>Data Science (Python/R)</span>
+                    <span>Food Supply Chain</span><span>Kebijakan Fiskal</span>
+                    <span>Visualisasi Data</span><span>Ekonometrika</span>
+                    <span>Strategi Mitigasi Inflasi</span><span>Public Speaking</span>
+                </div>
+            </div>
+
+            <div class="sidebar-card" id="projectsCard">
+                <h3><i class="fas fa-folder-open"></i> Projects</h3>
+                <div class="project-item"><i class="fas fa-chart-simple"></i> <strong>Dashboard Rupiah Pangan 2026</strong><br><small>Visualisasi interaktif korelasi USD/IDR dengan 20 bahan pokok.</small></div>
+                <div class="project-item"><i class="fas fa-file-alt"></i> <strong>Policy Brief: Stabilisasi Pangan</strong><br><small>Rekomendasi untuk BI dan Kemendag.</small></div>
+                <div class="project-item"><i class="fas fa-chalkboard-user"></i> <strong>Webinar "Pangan di Tengah Badai Dolar"</strong><br><small>Diskusi dengan 5 ekonom, 12k+ partisipan.</small></div>
+            </div>
+
+            <div class="sidebar-card contact-info" id="contactCard">
+                <h3><i class="fas fa-address-card"></i> Contact</h3>
+                <p><i class="fas fa-envelope"></i> ekanalysis@pangan.id</p>
+                <p><i class="fab fa-twitter"></i> @rupiahpangan_26</p>
+                <p><i class="fab fa-linkedin"></i> /in/ekonomipangan</p>
+                <p><i class="fab fa-github"></i> pangan-analytics</p>
+                <p><i class="fas fa-phone-alt"></i> +62 812 3456 7890</p>
+                <hr style="margin:16px 0">
+                <p><small>📬 Kolaborasi riset & diskusi ekonomi terbuka.</small></p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Ekonomi & Pangan — Menganalisis Dampak Rupiah terhadap Ketahanan Pangan Indonesia</p>
+        <p><i class="fas fa-chart-line"></i> Data simulasi & analisis interaktif | #RupiahStabil</p>
+    </div>
+</footer>
+
+<!-- JavaScript Eksternal -->
+<script src="script.js"></script>
+</body>
+</html>
