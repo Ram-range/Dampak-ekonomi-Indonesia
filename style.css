@@ -100,6 +100,7 @@ body.dark-mode nav {
     gap: 32px;
     list-style: none;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -270,6 +271,11 @@ body.dark-mode .content-article h2 {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.2s;
+}
+
+.currency-converter button:hover {
+    background: #b45f06;
 }
 
 .chart-container {
@@ -284,6 +290,7 @@ body.dark-mode .content-article h2 {
     margin-bottom: 32px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     border: 1px solid #f0e3d7;
+    scroll-margin-top: 90px;
 }
 
 .avatar {
@@ -305,16 +312,34 @@ body.dark-mode .content-article h2 {
     font-size: 0.8rem;
     display: inline-block;
     margin: 5px 5px 0 0;
+    transition: 0.2s;
+}
+
+.skill-tags span:hover {
+    background: #e6a157;
+    color: white;
+    cursor: default;
 }
 
 .project-item {
     margin-bottom: 20px;
     border-left: 3px solid #e6a157;
     padding-left: 16px;
+    transition: 0.2s;
+}
+
+.project-item:hover {
+    border-left-color: #b45309;
+    transform: translateX(4px);
 }
 
 .contact-info p {
     margin: 12px 0;
+}
+
+.contact-info i {
+    width: 28px;
+    color: #b45309;
 }
 
 footer {
@@ -338,5 +363,10 @@ footer {
     .nav-container {
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 20px;
     }
 }
